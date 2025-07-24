@@ -54,7 +54,9 @@ jobs:
         with:
           go-version: "1.22"
 
-      - name: Build and Package
+      # --- Build and Package for Linux/macOS ---
+      - name: Build and Package (Linux/macOS)
+        if: ${{ matrix.os != 'windows-latest' }} # Only run for non-Windows OSes
         env:
           GOOS: ${{ matrix.goos }}
           GOARCH: ${{ matrix.goarch }}
@@ -62,11 +64,8 @@ jobs:
           # Create the release directory
           mkdir -p release
 
-          # Determine output binary name with .exe for Windows
+          # Determine output binary name
           BINARY_NAME="cvgo-${{ matrix.platform }}-${{ matrix.arch }}"
-          if [ "${{ matrix.platform }}" == "windows" ]; then
-            BINARY_NAME="${BINARY_NAME}.exe"
-          fi
 
           # Build the Go binary
           go build -o release/${BINARY_NAME} main.go
@@ -80,6 +79,33 @@ jobs:
           cd release
           zip -r ../${ZIP_NAME} ./*
           cd .. # Go back to the root of the repository
+
+      # --- Build and Package for Windows ---
+      - name: Build and Package (Windows)
+        if: ${{ matrix.os == 'windows-latest' }} # Only run for Windows OS
+        env:
+          GOOS: ${{ matrix.goos }}
+          GOARCH: ${{ matrix.goarch }}
+        run: |
+          # Create the release directory
+          mkdir -p release
+
+          # Determine output binary name with .exe for Windows
+          $BINARY_NAME = "cvgo-${{ matrix.platform }}-${{ matrix.arch }}.exe"
+
+          # Build the Go binary
+          go build -o release/$BINARY_NAME main.go
+
+          # Copy additional files
+          Copy-Item template.html release/
+          Copy-Item data.json release/
+
+          # Create the zip archive
+          $ZIP_NAME = "cvgo-${{ matrix.platform }}-${{ matrix.arch }}.zip"
+          Set-Location release
+          Compress-Archive -Path * -DestinationPath ../$ZIP_NAME
+          Set-Location .. # Go back to the root of the repository
+        shell: pwsh # Explicitly use PowerShell for this step
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
@@ -113,6 +139,6 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            artifacts/binary-*/cvgo-*.zip # Target the zip files
+            artifacts/binary-*/cvgo-*.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
