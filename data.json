@@ -1,0 +1,240 @@
+{
+  "name": "Your Name",
+  "titles": [
+    "Your Main Title",
+    "Your Secondary Title"
+  ],
+  "email": "your.email@example.com",
+  "phone": "+00 000 000 00 00",
+  "address": "City, Country",
+  "links": [
+    {
+      "title": "GitHub",
+      "href": "https://github.com/YourGitHub"
+    },
+    {
+      "title": "LinkedIn",
+      "href": "https://linkedin.com/in/your-linkedin"
+    },
+    {
+      "title": "Website",
+      "href": "https://yourwebsite.dev"
+    },
+    {
+      "title": "YouTube",
+      "href": "http://youtube.com/yourchannel"
+    },
+    {
+      "title": "Itch.io",
+      "href": "https://yourusername.itch.io"
+    },
+    {
+      "title": "Udemy",
+      "href": "https://www.udemy.com/user/your-udemy-username/"
+    }
+  ],
+  "languages": [
+    "Lang1",
+    "Lang2",
+    "Lang3",
+    "Lang4",
+    "Lang5",
+    "Lang6",
+    "Lang7",
+    "Lang8",
+    "Lang9",
+    "Lang10",
+    "Lang11",
+    "Lang12"
+  ],
+  "techStack": [
+    {
+      "title": "Frontend",
+      "technologies": [
+        "Tech1",
+        "Tech2",
+        "Tech3",
+        "Tech4",
+        "Tech5",
+        "Tech6",
+        "Tech7",
+        "Tech8",
+        "Tech9",
+        "Tech10",
+        "Tech11",
+        "Tech12",
+        "Tech13",
+        "Tech14"
+      ]
+    },
+    {
+      "title": "Backend",
+      "technologies": [
+        "Tech1",
+        "Tech2",
+        "Tech3",
+        "Tech4",
+        "Tech5",
+        "Tech6",
+        "Tech7"
+      ]
+    },
+    {
+      "title": "CI/CD",
+      "technologies": [
+        "Tech1",
+        "Tech2",
+        "Tech3",
+        "Tech4"
+      ]
+    },
+    {
+      "title": "Databases",
+      "technologies": [
+        "Tech1",
+        "Tech2",
+        "Tech3",
+        "Tech4",
+        "Tech5",
+        "Tech6"
+      ]
+    },
+    {
+      "title": "Networking",
+      "technologies": [
+        "Tech1",
+        "Tech2"
+      ]
+    },
+    {
+      "title": "Test & Automation",
+      "technologies": [
+        "Tech1",
+        "Tech2"
+      ]
+    },
+    {
+      "title": "Desktop",
+      "technologies": [
+        "Tech1",
+        "Tech2",
+        "Tech3"
+      ]
+    },
+    {
+      "title": "Data Analysis",
+      "technologies": [
+        "Tech1",
+        "Tech2",
+        "Tech3",
+        "Tech4"
+      ]
+    },
+    {
+      "title": "Utilities",
+      "technologies": [
+        "Tech1",
+        "Tech2",
+        "Tech3"
+      ]
+    }
+  ],
+  "about": [
+    "A passionate and skilled developer looking to contribute to exciting projects. Eager to learn and grow, bringing a strong work ethic and collaborative spirit to every team. Ready to tackle new challenges and make a significant impact."
+  ],
+  "experience": [
+    {
+      "title": "Job Title 1",
+      "company": "Company Name 1",
+      "date": "Start Year - End Year",
+      "description": "Brief description of responsibilities and achievements in this role. Focus on transferable skills and impactful contributions."
+    },
+    {
+      "title": "Job Title 2",
+      "company": "Company Name 2",
+      "date": "Start Year - End Year",
+      "description": "Brief description of responsibilities and achievements in this role. Highlight key projects or technologies used."
+    }
+  ],
+  "education": [
+    {
+      "university": "University Name 1",
+      "programme": "Programme Name (Degree Type)",
+      "date": "Start Year - End Year"
+    },
+    {
+      "university": "University Name 2",
+      "programme": "Programme Name (Degree Type)",
+      "date": "Start Year - End Year"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Project Title 1",
+      "stack": [
+        "Tech1",
+        "Tech2",
+        "Tech3",
+        "Tech4",
+        "Tech5"
+      ],
+      "description": "A concise description of the project, its purpose, and key features.",
+      "repo": "https://github.com/YourGitHub/project1"
+    },
+    {
+      "title": "Project Title 2",
+      "stack": [
+        "Tech1",
+        "Tech2",
+        "Tech3",
+        "Tech4",
+        "Tech5"
+      ],
+      "description": "Description of another project, highlighting its technical challenges and solutions.",
+      "repo": "https://github.com/YourGitHub/project2"
+    },
+    {
+      "title": "Project Title 3",
+      "stack": [
+        "Tech1",
+        "Tech2",
+        "Tech3",
+        "Tech4",
+        "Tech5"
+      ],
+      "description": "Brief overview of a third project, emphasizing its impact or innovation.",
+      "repo": "https://github.com/YourGitHub/project3"
+    },
+    {
+      "title": "Project Title 4",
+      "stack": [
+        "Tech1",
+        "Tech2",
+        "Tech3",
+        "Tech4"
+      ],
+      "description": "Description of a fourth project, focusing on the technologies used and skills applied.",
+      "repo": "https://github.com/YourGitHub/project4"
+    },
+    {
+      "title": "Project Title 5",
+      "stack": [
+        "Tech1",
+        "Tech2",
+        "Tech3"
+      ],
+      "description": "Summary of a fifth project, detailing its functionality or unique aspects.",
+      "repo": "https://github.com/YourGitHub/project5"
+    },
+    {
+      "title": "Project Title 6",
+      "stack": [
+        "Tech1",
+        "Tech2",
+        "Tech3"
+      ],
+      "description": "Description of a sixth project, including its scope and achieved outcomes.",
+      "repo": "https://github.com/YourGitHub/project6"
+    }
+  ]
+}

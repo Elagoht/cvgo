@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>{{.name}} - CV</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      background-color: black;
+      font-size: 11pt;
+    }
+    body {
+      background: white;
+      font-family: "Outfit", sans-serif;
+      font-optical-sizing: auto;
+      width: 210mm;
+      height: 297mm;
+      margin: 0 auto;
+      display: flex;
+    }
+    aside {
+      padding: 1rem;
+      width: 33%;
+      flex-shrink: 0;
+      background: #f7f7f6;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      box-shadow: 0 0 2.5rem 0.125rem inset #dcddd9;
+    }
+    hgroup {
+      display: flex;
+      flex-direction: column;
+    }
+    h1 {
+      color: #4c5243;
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+    hgroup span {
+      color: #1a1c17;
+      font-size: 1.125rem;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+    nav a {
+      text-align: center;
+      flex-grow: 1;
+      background-color: #dcddd9;
+      padding: 0.25rem;
+      border-radius: 0.25rem;
+    }
+    hr {
+      border: none;
+      height: 1px;
+      background-image: linear-gradient(
+        to right,
+        transparent 0%,
+        #4c524355 50%,
+        transparent 100%
+      );
+    }
+    ol {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    a {
+      text-decoration: none;
+      color: #4c5243;
+    }
+    h2 {
+      color: #4c5243;
+      font-size: 1.25rem;
+    }
+    main h2 {
+      margin-top: 0.5rem;
+      margin-bottom: 0.25rem;
+      border-bottom: 0.06125rem solid #4c5243;
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+      list-style: none;
+    }
+    ul li {
+      background-color: #dcddd9;
+      padding: 0.125rem 0.5rem;
+      border-radius: 0.25rem;
+      font-size: 0.875rem;
+    }
+    h3 {
+      color: #5f6752;
+      font-size: 1rem;
+      margin: 0.5rem;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 1rem;
+    }
+    fieldset {
+      margin-bottom: 0.5rem;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    legend {
+      font-weight: 500;
+      font-size: 1.125rem;
+      color: #4c5243;
+      margin-bottom: 0.25rem;
+    }
+    fieldset hgroup {
+      flex-direction: row;
+      gap: 0.5rem;
+    }
+    time {
+      font-size: 0.75rem;
+    }
+    @media print {
+      @page {
+        margin: 0;
+      }
+      body,
+      html {
+        height: 297mm;
+        width: 210mm;
+      }
+    }
+    fieldset ul {
+      margin-top: 0.25rem;
+    }
+  </style>
+
+  <body>
+    <aside>
+      <hgroup>
+        <h1>{{.name}}</h1>
+
+        {{ range .titles}} <span>{{.}}</span>{{end}}
+      </hgroup>
+
+      <ol>
+        <li>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="1rem"
+            viewBox="0 -960 960 960"
+            width="1rem"
+            fill="#1f1f1f"
+          >
+            <path
+              d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"
+            />
+          </svg>
+
+          <a href="mailto:{{.email}}">{{ .email }}</a>
+        </li>
+
+        <li>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="1rem"
+            viewBox="0 -960 960 960"
+            width="1rem"
+            fill="#1f1f1f"
+          >
+            <path
+              d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"
+            />
+          </svg>
+
+          <a href="tel:{{.phone}}">{{ .phone }}</a>
+        </li>
+
+        <li>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="1rem"
+            viewBox="0 -960 960 960"
+            width="1rem"
+            fill="#1f1f1f"
+          >
+            <path
+              d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"
+            />
+          </svg>
+
+          {{ .address }}
+        </li>
+      </ol>
+
+      <nav>
+        {{ range .links }}<a href="{{ .href }}">☍ {{ .title }}</a>{{ end }}
+      </nav>
+
+      <h2>Languages</h2>
+
+      <ul>
+        {{ range .languages }}
+        <li>{{ . }}</li>
+        {{end}}
+      </ul>
+
+      <section>
+        {{ range .techStack }}
+        <h3>{{.title}}</h3>
+
+        <ul>
+          {{ range .technologies }}
+          <li>{{ . }}</li>
+          {{end}}
+        </ul>
+        {{ end }}
+      </section>
+    </aside>
+
+    <main>
+      <h2>Summary</h2>
+
+      {{ range .about }}
+      <p>{{ . }}</p>
+      {{ end }}
+
+      <h2>Experience</h2>
+
+      {{ range .experience }}
+      <fieldset>
+        <legend>
+          <strong>{{.title }}</strong> @ {{ .company }}
+
+          <time>({{ .date }})</time>
+        </legend>
+
+        <p>{{ .description }}</p>
+      </fieldset>
+      {{ end }}
+
+      <h2>Education</h2>
+
+      {{ range .education }}
+      <span>
+        <strong>{{ .university }}</strong> {{ .programme }}
+        <time>({{ .date }})</time>
+      </span>
+      {{ end }}
+
+      <h2>Projects</h2>
+
+      {{ range .projects }}
+      <fieldset>
+        <legend>
+          <a href="{{ .repo }}">☍ {{ .title }}</a>
+        </legend>
+
+        <ul>
+          {{ range .stack }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+
+        <strong>{{.university }}</strong>
+
+        <span>{{ .description }}</span>
+      </fieldset>
+      {{ end }}
+    </main>
+  </body>
+</html>
