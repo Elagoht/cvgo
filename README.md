@@ -2,7 +2,7 @@
 
 ![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![JSON](https://img.shields.io/badge/JavaScript-black?style=for-the-badge&logo=json&logoColor=white)
+![JSON](https://img.shields.io/badge/JSON-black?style=for-the-badge&logo=json&logoColor=white)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/Elagoht/cvgo/release.yaml?style=for-the-badge)
 [![GitHub Stars](https://img.shields.io/github/stars/Elagoht/cvgo.svg?style=for-the-badge)](https://github.com/Elagoht/cvgo/stargazers)
 ![GitHub License](https://img.shields.io/github/license/Elagoht/cvgo?style=for-the-badge)
@@ -94,7 +94,7 @@ The `template.html` file uses [Go's `html/template` package](https://pkg.go.dev/
 
 * `{{if .Condition}} ... {{end}}`: Conditional rendering.
 
-Feel free to add any CSS, JavaScript, or external libraries to your `template.html` to achieve the desired look and feel for your CV.
+Feel free to add any CSS, or external libraries to your `template.html` to achieve the desired look and feel for your CV.
 
 ## 🤝 Contributing
 
